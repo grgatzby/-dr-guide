@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+Experience.destroy_all
+
+20.times{Experience.create(
+  title: Faker::Lorem.paragraph,
+  category: ["touring", "biking", "nature"].sample,
+  location: Faker::Address.city,
+  description: Faker::Lorem.paragraph_by_chars
+)}
