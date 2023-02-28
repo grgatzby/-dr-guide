@@ -2,5 +2,9 @@
 
 
 <% @experiences.each do |experience| %>
-  <p><%= experience.title %></p>
+  <p>
+    <%= experience.title %>
+    <%= experience.location %>
+  </p>
+
 <% end %>
