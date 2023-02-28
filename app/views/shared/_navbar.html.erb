@@ -1,8 +1,11 @@
 <div class="navbar">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= cl_image_tag("zi57czkmjgen2j0oxhvd", width: 25, height: 25, crop: :fill) %>
-    <% end %>
+    <div class="container-flex">
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= cl_image_tag("zi57czkmjgen2j0oxhvd", width: 25, height: 25, crop: :fill)%>
+      <% end %>
+      <p>Dr Bear</p>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
