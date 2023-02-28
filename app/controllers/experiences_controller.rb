@@ -7,6 +7,7 @@ class ExperiencesController < ApplicationController
 
   def show
     @experience = Experience.find(params[:id])
+    # fetch the reviews of the experience and set them in a global variable to gain access to them in the show html
   end
 
   def new

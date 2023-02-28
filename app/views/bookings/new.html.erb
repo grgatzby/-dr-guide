@@ -1,0 +1,9 @@
+<H1>Book an Experience</H1>
+
+<%= simple_form_for [@experience, @booking] do |f| %>
+  <%= f.input :date_start %>
+  <%= f.input :date_end %>
+  <%= f.submit "Add Booking", class: "btn btn-primary"%>
+<% end %>
+
+<%= link_to "Go back", experiences_path %>
