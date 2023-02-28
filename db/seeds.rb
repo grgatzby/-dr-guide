@@ -10,7 +10,7 @@ require 'faker'
 Experience.destroy_all
 
 20.times{Experience.create(
-  title: Faker::Lorem.paragraph,
+  title: Faker::Book.title,
   category: ["touring", "biking", "nature"].sample,
   location: Faker::Address.city,
   description: Faker::Lorem.paragraph_by_chars
