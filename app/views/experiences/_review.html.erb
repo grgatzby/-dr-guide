@@ -1,0 +1,12 @@
+
+  <div class="card card-review text-dark bg-light border-dark" >
+    <div class="card-header">
+      <%= @experience.title %> | Rating: <%= review.rating %>
+    </div>
+    <div class="card-body">
+      <p class="card-text"> <%= review.comment %> </p>
+    </div>
+    <div class="card-footer text-muted">
+      By <%= review.user.first_name %> <%= review.user.last_name %> | <%= review.created_at %>
+    </div>
+  </div>
