@@ -97,5 +97,7 @@
 
 
 <% @reviews.each do |review| %>
-  <%= review.comment %>
+  <p><%= review.user.first_name %></p>
+  <p><%= review.comment %></p>
+  <p><%= review.rating %></p>
 <% end %>
