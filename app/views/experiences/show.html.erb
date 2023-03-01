@@ -9,15 +9,15 @@
 <div class="experience-info">
   <div class="container exp-container">
     <div class="row row-cols-auto">
-      <div class="col-md-12">
+      <div class="col-md-10">
         <h2><%= @experience.title %></h2>
         <h5><%= @experience.location %> | <%= @experience.category %> </h5>
         <p><%= @experience.description %></p>
       </div>
-      <div class="com-md-0">
+      <div class="com-md-2">
+      <%= link_to "Create Review", new_experience_review_path(:experience => { :experience.id => :experience.id}) %>
 
       </div>
-
     </div>
   </div>
 </div>
