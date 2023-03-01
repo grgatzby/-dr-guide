@@ -47,57 +47,11 @@
 <div class="review">
   <div class="container">
     <div class="cards-review">
-      <div class="card card-review text-dark bg-light border-dark" >
-        <div class="card-header">
-          <%= @experience.title %> | Review.rating
-        </div>
-        <div class="card-body">
-          <p class="card-text">Review.comment => With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer text-muted">
-          By Review.User.first_name & Review.User.last_name | Review.created_at
-        </div>
-      </div>
-            <div class="card card-review text-dark bg-light border-dark" >
-        <div class="card-header">
-          <%= @experience.title %> | Review.rating
-        </div>
-        <div class="card-body">
-          <p class="card-text">Review.comment => With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer text-muted">
-          By Review.User.first_name & Review.User.last_name | Review.created_at
-        </div>
-      </div>
-      <div class="card card-review text-dark bg-light border-dark" >
-        <div class="card-header">
-          <%= @experience.title %> | Review.rating
-        </div>
-        <div class="card-body">
-          <p class="card-text">Review.comment => With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer text-muted">
-          By Review.User.first_name & Review.User.last_name | Review.created_at
-        </div>
-      </div>
-      <div class="card card-review text-dark bg-light border-dark" >
-        <div class="card-header">
-          <%= @experience.title %> | Review.rating
-        </div>
-        <div class="card-body">
-          <p class="card-text">Review.comment => With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer text-muted">
-          By Review.User.first_name & Review.User.last_name | Review.created_at
-        </div>
-      </div>
+
+       <% @reviews.each do |review| %>
+        <%= render "review", review: review %>
+       <% end %>
+
     </div>
   </div>
 </div>
-
-
-<% @reviews.each do |review| %>
-  <p><%= review.user.first_name %></p>
-  <p><%= review.comment %></p>
-  <p><%= review.rating %></p>
-<% end %>
