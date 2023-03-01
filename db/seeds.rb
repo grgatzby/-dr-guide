@@ -14,15 +14,15 @@ Experience.create(
   category: "Sight seeing",
   location: "Athens",
   description: "Make the most of your time in Athens with skip-the-ticket-line access to the Acropolis. Upgrade with optional entry to the Acropolis Museum, Ancient Agora, Roman Forum, Kerameikos, Temple of Zeus, or the National Archaeological Museum.",
-  photo: "ng2yzv49feaj1djntxvj"
+  user: User.first
 )
 
-Experience.create(
+Experience.create!(
   title: "Wine tasting Paris",
   category: "Wine tasting",
   location: "Paris",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "cabi27axbianh0izfman"
+  user: User.first
 )
 
 Experience.create(
@@ -30,7 +30,7 @@ Experience.create(
   category: "Sight seeing",
   location: "Paris",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "cabi27axbianh0izfman"
+  user: User.first
 )
 
 Experience.create(
@@ -38,7 +38,7 @@ Experience.create(
   category: "Sight seeing",
   location: "London",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "tnfystrq72vyabvdvcuy"
+  user: User.first
 )
 
 Experience.create(
@@ -46,14 +46,14 @@ Experience.create(
   category: "Horse riding",
   location: "Navacerrada, Spain",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "sw8lkvckwmvg5utw0su9"
+  user: User.first
 )
 Experience.create(
   title: "Red sea flora",
   category: "Scuba diving",
   location: "Sharm El-Sheikh, Egypt",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "mhsdyfgvhebxo3nffpny"
+  user: User.first
 )
 
 Experience.create(
@@ -61,5 +61,5 @@ Experience.create(
   category: "Sight seeing",
   location: "Brussels",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  photo: "ofrgk1e8q18igszn2cix"
+  user: User.first
 )
