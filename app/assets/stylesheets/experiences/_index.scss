@@ -1,0 +1,47 @@
+.image-front {
+  height: 500px;
+  object-position: center;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+
+  .image-front-text {
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 250px;
+    text-align: center;
+  }
+}
+
+.cards-experiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media(max-width: 992px) {
+  .cards-experiences {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards-experiences {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cards-experiences-title {
+  color: grey;
+  font-size: 24px;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.cards-experiences-line {
+  width:70%;
+  margin: 16px auto;
+}

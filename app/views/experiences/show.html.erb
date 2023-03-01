@@ -94,3 +94,8 @@
     </div>
   </div>
 </div>
+
+
+<% @reviews.each do |review| %>
+  <%= review.comment %>
+<% end %>

@@ -1,0 +1,9 @@
+<div class="card-experience">
+  <div class="card-experience-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path experience.photo, crop: :fill %>')"></div>
+
+  <div class="card-experience-description">
+   <p><i class="fa-solid fa-star"></i> <%= [4.95, 4.52, 4.8, 4.6, 4.9].sample %></p>
+    <h4><%= experience.title%></h4>
+    <p><%= experience.description%></p>
+  </div>
+</div>
