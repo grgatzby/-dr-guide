@@ -36,7 +36,7 @@
         <p><%= @experience.description %></p>
       </div>
       <div class="com-md-4 ">
-        <p>RESERVER FORM SECTION</p>
+        <p>RESERVED FORM SECTION</p>
       </div>
 
     </div>
@@ -47,11 +47,9 @@
 <div class="review">
   <div class="container">
     <div class="cards-review">
-
        <% @reviews.each do |review| %>
         <%= render "review", review: review %>
        <% end %>
-
     </div>
   </div>
 </div>
