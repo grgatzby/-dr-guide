@@ -33,6 +33,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_28_224238) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.string "photo"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|

@@ -1,4 +1,6 @@
 class Experience < ApplicationRecord
   has_many :reviews
-  has_many :users
+  belongs_to :user
+
+  validates :category, :title, :location, :description, presence: true
 end
