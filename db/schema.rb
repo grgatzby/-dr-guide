@@ -61,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_130321) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.bigint "user_id"
-    t.string "photo"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
