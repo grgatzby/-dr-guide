@@ -9,7 +9,6 @@ require 'faker'
 
 Experience.destroy_all
 
-
 Experience.create(
   title: "Acropolis visit",
   category: "Sight seeing",

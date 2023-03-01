@@ -1,0 +1,15 @@
+.cards-review {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-review {
+
+  width: 360px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  margin: 20px auto;
+  border: 1px solid black;
+}
