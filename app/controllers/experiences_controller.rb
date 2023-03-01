@@ -46,6 +46,6 @@ class ExperiencesController < ApplicationController
 
   def experiences_params
     # Guillaume added :photo
-    params.require(:experience).permit(:title, :category, :location, :photo)
+    params.require(:experience).permit(:title, :category, :location, :description, :photo)
   end
 end
