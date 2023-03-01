@@ -16,7 +16,7 @@ experience = Experience.create(
   description: "Make the most of your time in Athens with skip-the-ticket-line access to the Acropolis. Upgrade with optional entry to the Acropolis Museum, Ancient Agora, Roman Forum, Kerameikos, Temple of Zeus, or the National Archaeological Museum.",
   user: User.first
 )
-raise
+
 file = "experience-acropilis.jpg"
 experience.photo.attach(io: file, filename: "experience-acropilis.jpg", content_type: "image/png")
 
