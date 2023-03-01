@@ -1,5 +1,7 @@
 <div class="banner">
   <div class="container">
+    <%= link_to "Go Back", experiences_path, class:"btn btn-light"%>
+    <p></p>
     <div class = "image-experience">
       <%= image_tag cl_image_path @experience.photo.key %>
     </div>
