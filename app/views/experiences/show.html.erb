@@ -1,6 +1,8 @@
 <div class="banner">
   <div class="container">
-    <img <%= image_tag "experience-acropolis", alt: "acropolis" %> >
+    <div class = "image-experience">
+      <%= image_tag cl_image_path @experience.photo.key %>
+    </div>
   </div>
 </div>
 
