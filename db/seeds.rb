@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
+require "open-uri"
+
 
 Experience.destroy_all
 
@@ -16,8 +18,7 @@ experience = Experience.create(
   description: "Make the most of your time in Athens with skip-the-ticket-line access to the Acropolis. Upgrade with optional entry to the Acropolis Museum, Ancient Agora, Roman Forum, Kerameikos, Temple of Zeus, or the National Archaeological Museum.",
   user: User.first
 )
-raise
-file = "experience-acropilis.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603354/ng2yzv49feaj1djntxvj.jpg")
 experience.photo.attach(io: file, filename: "experience-acropilis.jpg", content_type: "image/png")
 
 experience = Experience.create!(
@@ -27,7 +28,7 @@ experience = Experience.create!(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-paris.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603372/cabi27axbianh0izfman.jpg")
 experience.photo.attach(io: file, filename: "experience-paris.jpg", content_type: "image/png")
 
 experience = Experience.create(
@@ -37,7 +38,7 @@ experience = Experience.create(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-paris.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603372/cabi27axbianh0izfman.jpg")
 experience.photo.attach(io: file, filename: "experience-paris.jpg", content_type: "image/png")
 
 experience = Experience.create(
@@ -47,7 +48,7 @@ experience = Experience.create(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-little-venice.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603396/tnfystrq72vyabvdvcuy.jpg")
 experience.photo.attach(io: file, filename: "experience-little-venice.jpg", content_type: "image/png")
 
 experience = Experience.create(
@@ -57,7 +58,7 @@ experience = Experience.create(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-horse-riding.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603382/sw8lkvckwmvg5utw0su9.jpg")
 experience.photo.attach(io: file, filename: "experience-horse-riding.jpg", content_type: "image/png")
 
 experience = Experience.create(
@@ -67,7 +68,7 @@ experience = Experience.create(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-scuba.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677625353/mhsdyfgvhebxo3nffpny.jpg")
 experience.photo.attach(io: file, filename: "experience-scuba.jpg", content_type: "image/png")
 
 experience = Experience.create(
@@ -77,5 +78,5 @@ experience = Experience.create(
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
   user: User.first
 )
-file = "experience-brussels.jpg"
+file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603650/ofrgk1e8q18igszn2cix.jpg")
 experience.photo.attach(io: file, filename: "experience-brussels.jpg", content_type: "image/png")
