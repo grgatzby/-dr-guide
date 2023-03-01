@@ -12,13 +12,13 @@
 
 
 .banner {
-  background-size: cover;
   background-position: center;
-  padding: 0px 0;
+  padding: 0 auto;
 }
 
 .banner img {
-  width: 300px;
+  background-size: cover;
+  width: 700px;
   height: auto;
   background-size: cover;
 }
