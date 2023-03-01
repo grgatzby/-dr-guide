@@ -1,7 +1,7 @@
 
   <div class="card card-review text-dark bg-light border-dark" >
     <div class="card-header">
-      <%= @experience.title %> | Rating: <%= review.rating %>/5
+      <%= @experience.title %> | Rating: <%= review.rating %>/5 <%= link_to "Edit", edit_experience_review_path(@experience), class: 'btn btn-light' %>
     </div>
     <div class="card-body">
       <p class="card-text"> <%= review.comment %> </p>
