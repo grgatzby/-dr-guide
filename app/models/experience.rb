@@ -4,4 +4,8 @@ class Experience < ApplicationRecord
   has_many_attached :photos
 
   validates :category, :title, :location, :description, presence: true
+
+  def average_rating
+    reviews.average(:rating).to_f
+  end
 end

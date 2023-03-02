@@ -1,15 +1,12 @@
 .cards-review {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: inline;
 }
 
 .card-review {
-
-  width: 360px;
+  width: 100%;
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
-  text-align: center;
+  text-align: left;
   margin: 20px auto;
   border: 1px solid black;
 }

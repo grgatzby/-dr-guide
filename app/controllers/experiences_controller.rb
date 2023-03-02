@@ -2,8 +2,25 @@ class ExperiencesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @experiences = Experience.all
+    if params[:query].present?
+      sql_query = <<~SQL
+        experiences.title @@ :query
+        OR experiences.description @@ :query
+        OR experiences.category @@ :query
+        OR experiences.location @@ :query
+        OR users.first_name @@ :query
+        OR users.last_name @@ :query
+      SQL
+      @experiences = Experience.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      if @experiences.empty?
+        flash[:notice] = "No results found for '#{params[:query]}'. Please try again."
+        redirect_back(fallback_location: experiences_path)
+      end
+    else
+      @experiences = Experience.all
+    end
   end
+
 
   def show
     @experience = Experience.find(params[:id])
