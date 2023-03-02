@@ -1,14 +1,11 @@
-.banner {
+.banner-show {
   width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 }
 
 .image-experience {
-  width: 1200px;
+  width: 100%;
   height: 600px;
   background-size: cover;
   background-position: center;
-  object-fit: fill;
+  object-fit: cover;
 }
