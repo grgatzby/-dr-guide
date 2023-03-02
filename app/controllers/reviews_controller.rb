@@ -6,6 +6,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    raise
     @review = Review.new(review_params)
     @review.experience = @experience
     @review.user = current_user
