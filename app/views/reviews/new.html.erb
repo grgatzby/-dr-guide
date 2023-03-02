@@ -1,11 +1,9 @@
 <div class="container-form">
   <H1>Create a Review</H1>
-  <form>
     <%= simple_form_for [@experience, @review] do |f| %>
       <%= f.input :comment %>
       <%= f.input :rating %>
       <%= f.submit "Create Review", class: "btn btn-flat"%>
     <% end %>
-  </form>
   <%= link_to "Go back", experience_path(@experience), class: "btn btn-ghost" %>
 </div>
