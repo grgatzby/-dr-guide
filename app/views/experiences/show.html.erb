@@ -16,7 +16,9 @@
   <div class="container exp-container">
     <div class="row row-cols-auto">
       <div class="col-md-12">
-        <h2><%= @experience.title %> <%= link_to "Select dates", new_experience_booking_path(@experience), class: 'btn btn-success' %></h2>
+        <span>
+          <h2><%= @experience.title %> <%= link_to "Select dates", new_experience_booking_path(@experience), class: 'btn btn-success' %></h2>
+        </span>
         <h5><%= @experience.location %> | <%= @experience.category %> </h5>
         <p><%= @experience.description %></p>
       </div>
