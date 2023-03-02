@@ -8,7 +8,6 @@
 require 'faker'
 require "open-uri"
 
-
 Experience.destroy_all
 
 experience = Experience.create(

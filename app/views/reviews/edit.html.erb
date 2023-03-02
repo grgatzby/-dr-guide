@@ -1,9 +1,11 @@
-<H1>Edit a Review</H1>
-
-<%= simple_form_for [@experience, @review] do |f| %>
-  <%= f.input :comment %>
-  <%= f.input :rating %>
-  <%= f.submit "Edit Review", class: "btn btn-primary"%>
-<% end %>
-
-<%= link_to "Go back", experience_path(@experience) %>
+<div class="container-form">
+  <H1>Edit a Review</H1>
+  <div class="form">
+  <%= simple_form_for [@experience, @review] do |f| %>
+    <%= f.input :comment %>
+    <%= f.input :rating %>
+    <%= f.submit "Edit Review", class: "btn btn-flat"%>
+  <% end %>
+  </div>
+  <%= link_to "Go back", experience_path(@experience), class: "btn btn-ghost"%>
+</div>

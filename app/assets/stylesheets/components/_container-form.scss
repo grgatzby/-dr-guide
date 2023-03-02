@@ -1,0 +1,12 @@
+.container-form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+
+@media(max-width: 660px) {
+  .container-form {
+  width: 500px;
+  padding: 0px 15px
+  }
+}
