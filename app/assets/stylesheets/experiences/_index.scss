@@ -15,11 +15,12 @@
 }
 
 .cards-experiences {
+  margin: 16px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 @media(max-width: 992px) {
@@ -35,13 +36,33 @@
 }
 
 .cards-experiences-title {
-  color: grey;
   font-size: 24px;
-  align-items: center;
   margin-top: 16px;
 }
 
 .cards-experiences-line {
   width:70%;
-  margin: 16px auto;
+  margin: 0;
+}
+
+.links-box {
+  align-items: center;
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
+  .btn-ghost {
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn-ghost:hover {
+    opacity: 1;
+  }
 }
