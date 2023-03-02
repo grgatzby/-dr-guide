@@ -7,7 +7,7 @@
       <%= form_with url: experiences_path, method: :get, class: "d-flex", id: "search-form" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "form-control form-search-bar",
           placeholder: "Search by location"
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
