@@ -24,9 +24,32 @@ users = User.all
 puts "-Seeding experiences-"
 puts "----------------------"
 
+experience_acropolis = {
+  title: "Acropolis visit",
+  category: "Sight seeing",
+  location: "Athens",
+  description: "Make the most of your time in Athens with skip-the-ticket-line access to the Acropolis. Upgrade with optional entry to the Acropolis Museum, Ancient Agora, Roman Forum, Kerameikos, Temple of Zeus, or the National Archaeological Museum."}
+
+experience_spain = {
+  title: "Horse riding in Spain",
+  category: "Horse riding",
+  location: "Madrid",
+  description: "Enjoy fantastic horse riding in teh Navacerrada pampa, and ride in the sunset."}
+
+experience_brussels = {
+  title: "Visit the Marolles in Brussels",
+  category: "Sight seeing",
+  location: "brussels",
+  description: "The Marolles is an old but lively Brussels neighborhood located between the Palace of Justice and the Brussels-South railway station. By exploring its charming streets lined with antique and vintage shops, along with its small galleries and flea market, you’ll undoubtedly be won over by its unique atmosphere."}
+
+experience_brussels = {
+    title: "Visit the Marolles in Brussels",
+    category: "Sight seeing",
+    location: "brussels",
+    description: "The Marolles is an old but lively Brussels neighborhood located between the Palace of Justice and the Brussels-South railway station. By exploring its charming streets lined with antique and vintage shops, along with its small galleries and flea market, you’ll undoubtedly be won over by its unique atmosphere."}
+
 10.times do
   user = users.sample
-
   experience = Experience.new(
     title: "Acropolis visit",
     category: "Sight seeing",
@@ -36,8 +59,6 @@ puts "----------------------"
   experience.user = user
   experience.save!
 end
-
-
 
 experiences = Experience.all
 
