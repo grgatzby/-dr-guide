@@ -1,15 +1,36 @@
-<div class="banner">
-  <div class="container">
-    <%= link_to "Go Back", experiences_path, class:"btn btn-light"%>
-    <p></p>
-    <div class = "image-experience">
+<div class="container">
+  <div class="banner">
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
     <% @experience.photos.each do |photo| %>
-      <%= image_tag cl_image_path photo.key %>
+      <div class="carousel-item active">
+       <%= cl_image_tag photo.key, class: "image-experience" %>
+      </div>
     <% end %>
-    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+      <%# <div class ="image-experience" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path photo.key %>
+
+
+
   </div>
 </div>
 
+        <%# <%= image_tag cl_image_path photo.key %>
+
+    <%= link_to "Go Back", experiences_path, class:"btn btn-light"%>
 
 
 <div class="experience-info">
