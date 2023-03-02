@@ -1,8 +1,5 @@
 .banner-show {
   width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 }
 
 .image-experience {
@@ -10,5 +7,5 @@
   height: 600px;
   background-size: cover;
   background-position: center;
-  object-fit: fill;
+  object-fit: cover;
 }
