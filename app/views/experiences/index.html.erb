@@ -7,8 +7,10 @@
   </div>
   <div >
     <%= render "marketing" %>
-    <h2 class="container cards-experiences-title">Popular experiences <%= link_to "Add an experience", new_experience_path, class: "btn btn-flat" %></h2>
-
+    <div>
+        <h2 class="container cards-experiences-title">Popular experiences </h2>
+        <%= link_to "Add an experience", new_experience_path%>
+    </div>
   </div>
   <hr class="cards-experience-line" />
 
