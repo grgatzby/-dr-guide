@@ -46,6 +46,7 @@ experiences.each do |experience|
     review.experience = experience
     review.save!
   end
+  
   file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603650/ofrgk1e8q18igszn2cix.jpg")
   experience.photos.attach(io: file, filename: "experience-brussels.jpg", content_type: "image/jpg")
 
