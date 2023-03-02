@@ -15,19 +15,15 @@
       <% end %>
     </div>
   </div>
-  <div >
-    <%= render "marketing" %>
-    <div>
-        <h2 class="container cards-experiences-title">Popular experiences </h2>
-        <%= link_to "Add an experience", new_experience_path%>
-    </div>
+  <div class="container">
+    <%= render "home_marketing" %>
+    <%= render "home_links" %>
   </div>
   <hr class="cards-experience-line" />
-
   <div class="container">
     <div class="cards-experiences">
       <% @experiences.each do |experience|  %>
-        <%= render "experience", experience: experience %>
+        <%= render "home_experience", experience: experience %>
       <% end %>
     </div>
   </div>
