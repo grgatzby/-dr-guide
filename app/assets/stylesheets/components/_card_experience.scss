@@ -1,13 +1,19 @@
 
 
 .card-experience {
-  width: 300px;
+  position: relative;
+  width: 360px;
   height: 400px;
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: $card-border-radius;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  &:hover {
+    border: solid 1px lightgrey;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
+  }
 
   .card-experience-photo {
     width: 100%;
@@ -17,6 +23,15 @@
     border-top-right-radius: $card-border-radius;
     border-top-left-radius: $card-border-radius;
   }
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
 }
 
 .card-experience-description {
