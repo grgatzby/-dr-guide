@@ -2,22 +2,29 @@
 require 'faker'
 require "open-uri"
 
+puts "Destroying databases"
+puts "--------------------"
 Review.destroy_all
 Experience.destroy_all
-puts "Destroying experiences"
-puts "---------------------------"
 User.destroy_all
 
+puts "----Seeding users----"
+puts "---------------------"
 10.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    email: "bla#{i}@gmail.com",
+    email: "bear#{i}@gmail.com",
     password: "123456"
   )
 end
 
 users = User.all
+
+puts "-Seeding experiences-"
+puts "----------------------"
+
+
 
 10.times do
   user = users.sample
@@ -32,6 +39,8 @@ users = User.all
   experience.save!
 end
 
+
+
 experiences = Experience.all
 
 experiences.each do |experience|
@@ -40,13 +49,13 @@ experiences.each do |experience|
 
     review = Review.new(
       comment: Faker::Quote.famous_last_words,
-      rating: rand(1..5)
+      rating: rand(3..5)
     )
     review.user = user
     review.experience = experience
     review.save!
   end
-  
+
   file = URI.open("https://res.cloudinary.com/dgndoabic/image/upload/v1677603650/ofrgk1e8q18igszn2cix.jpg")
   experience.photos.attach(io: file, filename: "experience-brussels.jpg", content_type: "image/jpg")
 
