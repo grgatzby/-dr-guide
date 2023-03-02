@@ -24,8 +24,6 @@ users = User.all
 puts "-Seeding experiences-"
 puts "----------------------"
 
-
-
 10.times do
   user = users.sample
 
