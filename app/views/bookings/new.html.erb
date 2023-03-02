@@ -1,9 +1,11 @@
-<H1>Book an Experience</H1>
-
-<%= simple_form_for [@experience, @booking] do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.submit "Add Booking", class: "btn btn-primary"%>
-<% end %>
-
-<%= link_to "Go back", experiences_path %>
+<div class="container-form">
+  <H1>Book an Experience</H1>
+  <div class="form">
+  <%= simple_form_for [@experience, @booking] do |f| %>
+    <%= f.input :date_start %>
+    <%= f.input :date_end %>
+    <%= f.submit "Add Booking", class: "btn btn-flat"%>
+  <% end %>
+  </div>
+  <%= link_to "Go back", experiences_path, class: "btn btn-ghost"%>
+</div>

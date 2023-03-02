@@ -1,12 +1,14 @@
-<H1>Create an Experience</H1>
-
-<%= simple_form_for @experience do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :category %>
-  <%= f.input :location %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Create Experience", class: "btn btn-primary" %>
-<% end %>
-
-<%= link_to "Go back", experiences_path %>
+<div class="container-form">
+  <H1>Create an Experience</H1>
+  <div class="form">
+  <%= simple_form_for @experience do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :category %>
+    <%= f.input :location %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Create Experience", class: "btn btn-flat" %>
+  <% end %>
+  </div>
+  <%= link_to "Go back", experiences_path, class: "btn btn-ghost"%>
+</div>
