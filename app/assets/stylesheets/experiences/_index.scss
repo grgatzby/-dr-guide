@@ -17,6 +17,14 @@
 .cards-experiences {
   margin: 16px 0;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+}
+.cards-marketing {
+  margin: 16px 0;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   flex-wrap: wrap;
