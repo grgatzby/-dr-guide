@@ -3,11 +3,12 @@
   <div class="image-front"
     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'motocross.jpg' %>')">
     <h1 class="image-front-text">Find thousands of experiences all around the world.</h1>
-    <div class="search-bar container rounded">
-      <%= form_with url: experiences_path, method: :get, class: "d-flex", id: "search-form" do %>
+    <div class="container rounded">
+      <%= form_with url: experiences_path, method: :get, class: "d-flex search-bar", id: "search-form" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control form-search-bar",
+          id: "form-search-bar",
+          class: "form-control",
           placeholder: "Search by location"
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
