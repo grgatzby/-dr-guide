@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :reviews
   has_many :experiences
+  has_many :bookings, dependent: :destroy
 
   validates :first_name, :last_name, presence: true, length: { minimum: 2, maximum: 50 }
   # validates_format_of :password, with: /(?=.[!@#$%&].[!@#$%&])/

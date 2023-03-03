@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
   before_action :set_experience, only: %i[new create]
 
+  def index
+    # @bookings = Booking.all
+    @bookings = current_user.bookings
+  end
+
   def new
     @booking = Booking.new
   end
@@ -24,7 +29,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to experiences_path, status: :see_other
+    redirect_to experience_booking_path, status: :see_other
   end
 
   private

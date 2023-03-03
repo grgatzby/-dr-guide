@@ -1,0 +1,19 @@
+
+<div class="container">
+  <% @bookings.each do |booking| %>
+    <div class="card mb-3">
+      <div class="card-header">
+        <%= booking.experience.title %>
+      </div>
+      <div class="card-body">
+        <% if booking.date_start %>
+          <p><strong>Start Date:</strong> <%= booking.date_start.strftime("%B %d, %Y") %></p>
+        <% end %>
+        <% if booking.date_end %>
+          <p><strong>End Date:</strong> <%= booking.date_end.strftime("%B %d, %Y") %></p>
+        <% end %>
+        <%= link_to "Delete", experience_booking_path(booking.experience, booking), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      </div>
+    </div>
+  <% end %>
+</div>
