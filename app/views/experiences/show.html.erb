@@ -5,8 +5,10 @@
     </div>
 
     <div id="edit-experience">
-      <%= link_to "Edit experience", edit_experience_path(@experience), class: "btn btn-ghost"%>
-      <%= link_to "Remove this experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <% if current_user.id ==  @experience.user_id%>
+        <%= link_to "Edit Experience", edit_experience_path(@experience), class: "btn btn-ghost"%>
+        <%= link_to "Remove Experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <% end %>
     </div>
   </div>
   <div class="banner-show">
@@ -46,12 +48,16 @@
     <div class="row row-cols-auto">
 
       <div class="col-md-12">
-        <h2><%= @experience.title %></h2><%= link_to "Book your experience", new_experience_booking_path(@experience), class: 'btn btn-success' %>
+        <% if current_user.id !=  @experience.user_id%>
+          <h2><%= @experience.title %></h2><%= link_to "Reserve dates", new_experience_booking_path(@experience), class: 'btn btn-success' %>
+        <% end %>
       </div>
         <h4><%= @experience.location %> | <%= @experience.category %></h4>
         <p><%= @experience.description %></p>
       <div class="title-of-experience">
-        <%= link_to "Add a review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
+        <% if current_user.id !=  @experience.user_id%>
+          <%= link_to "Add a review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
+        <% end %>
       </div>
     </div>
   </div>
