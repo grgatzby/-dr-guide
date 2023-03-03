@@ -32,10 +32,10 @@
       </div>
       <div class="com-md-0">
           <h2><%= @experience.title %></h2>
-          <%= link_to "Edit experience", edit_experience_path(@experience), class: "btn btn-ghost"%>
-          <%= link_to "Remove this experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-          <%= link_to "Add a review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
-          <%= link_to "Book your experience", new_experience_booking_path(@experience), class: 'btn btn-ghost' %>
+          <%= link_to "Edit Experience", edit_experience_path(@experience), class: "btn btn-ghost"%>
+          <%= link_to "Remove Experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%= link_to "Add Review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
+          <%= link_to "Reserve Dates", new_experience_booking_path(@experience), class: 'btn btn-ghost' %>
           <%= link_to "Back", experiences_path, class:"btn btn-ghost"%>
       </div>
     </div>
