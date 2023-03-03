@@ -1,5 +1,5 @@
 <div class="container-form">
-  <h1>Create a review</h1>
+  <h1>Create a Review</h1>
   <%= render "experiences/show_details_in_form", experience: @experience %>
     <%= simple_form_for [@experience, @review] do |f| %>
       <%= f.input :comment %>
@@ -9,4 +9,5 @@
         <%= link_to "Back", experience_path(@experience), class: "btn btn-ghost" %>
       </div>
     <% end %>
+  <%= link_to "Go back", experience_path(@experience), class: "btn btn-ghost" %>
 </div>
