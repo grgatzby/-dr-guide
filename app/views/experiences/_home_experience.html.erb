@@ -5,7 +5,7 @@
   <% end %>
   <div class="card-experience-description">
     <p><i class="fa-solid fa-star"></i> <%= experience.average_rating.round(1) %></p>
-    <h4><%=experience.title%></h4>
+    <h4><%=experience.title[0,40]+"..."%></h4>
 <p><%= experience.description[0,250]+"..."%></p>
   </div>
   <%= link_to '', experience_path(experience.id), class: 'card-link'%>
