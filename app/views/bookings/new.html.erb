@@ -5,8 +5,10 @@
     <%= simple_form_for [@experience, @booking] do |f| %>
       <%= f.input :date_start, as: :string, input_html: {class: 'datepicker'} %>
       <%= f.input :date_end, as: :string, input_html: {class: 'datepicker'} %>
-      <%= f.submit "Book", class: "btn btn-ghost"%>
-      <%= link_to "Back", experience_path(@experience.id), class: "btn btn-ghost"%>
+      <div class="form-actions">
+        <%= f.submit "Book", class: "btn btn-ghost"%>
+        <%= link_to "Back", experience_path(@experience.id), class: "btn btn-ghost"%>
+      </div>
     <% end %>
   </div>
 </div>

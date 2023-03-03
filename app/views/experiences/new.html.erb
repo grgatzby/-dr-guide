@@ -9,8 +9,10 @@
     <%= f.input :category %>
     <%= f.input :location %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Create your experience", class: "btn btn-ghost" %>
-    <%= link_to "Back to Home page", experiences_path, class: "btn btn-ghost"%>
+    <div class="form-actions">
+      <%= f.submit "Create your experience", class: "btn btn-ghost" %>
+      <%= link_to "Back", experiences_path, class: "btn btn-ghost"%>
+    </div>
   <% end %>
   </div>
 </div>

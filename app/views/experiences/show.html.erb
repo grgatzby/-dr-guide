@@ -45,7 +45,7 @@
           <%= link_to "Remove this experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
           <%= link_to "Add a review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
           <%= link_to "Book your experience", new_experience_booking_path(@experience), class: 'btn btn-ghost' %>
-          <%= link_to "Back to Home page", experiences_path, class:"btn btn-ghost"%>
+          <%= link_to "Back", experiences_path, class:"btn btn-ghost"%>
       </div>
     </div>
   </div>

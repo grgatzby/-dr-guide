@@ -90,7 +90,7 @@ experience_newengland = {
 
 experience_slovenia = {
   name: "experience_slovenia",
-  title: "Trek a scenic part of the international trail in Slovenia across the Alps and experience the mountains up-close on this hiking holiday.",
+  title: "Trek a scenic part of the international trail in Slovenia across the Alps.",
   category: "Adventure",
   location: "Slovenia",
   description: "Hiking is one of the top things to do in Slovenia; discover the rich history from both world wars along the way; hike from Cerkno to Bohinj in 4 days in one of the most scenic regions of the Slovenian Alps; experience Triglav National Park, Vogel, Franja Partisan Hospital, the Valley of Triglav Lakes, Bohinj, and other highlights of the Julian Alps",
@@ -112,7 +112,7 @@ experience_ireland = {
 
 experience_amsterdam = {
   name: "experience_amsterdam",
-  title: "Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums, vintage-filled shops and hyper-creative drinking, dining and design scenes.",
+  title: "Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums.",
   category: "Sight seeing",
   location: "Amsterdam, Netherlands",
   description: "Amsterdam's canal-woven core is laced by atmospheric narrow lanes. You never know what you'll find: a tiny hidden garden; a boutique selling witty, stylised Dutch-designed homewares and fashion; a jewel-box-like jenever (Dutch gin) distillery; a flower stall filled with tulips in a rainbow of hues; an old monastery-turned-classical-music-venue; an ultra-niche restaurant such as an all-avocado specialist or one reinventing age-old Dutch classics. Fringing the centre, post-industrial buildings in up-and-coming neighbourhoods now house creative enterprises, from art galleries to craft breweries and cutting-edge tech start-ups, as well as some of Europe's hottest clubs.",
