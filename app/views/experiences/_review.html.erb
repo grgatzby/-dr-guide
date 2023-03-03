@@ -2,8 +2,8 @@
   <div class="card card-review text-dark bg-light border-dark" >
     <div class="card-header">
       Rating: <%= review.rating %>/5
-      <%= link_to "Edit", edit_experience_review_path(@experience, review), class: 'btn btn-ghost' %>
-      <%= link_to "Delete", experience_review_path(@experience, review), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+      <%= link_to "", edit_experience_review_path(@experience, review), class: 'btn btn-ghost fa-solid fa-pen' %>
+      <%= link_to "", experience_review_path(@experience, review), class: 'btn btn-ghost fa-solid fa-trash', data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
     </div>
     <div class="card-body">
       <p class="card-text"> <%= review.comment %> </p>
