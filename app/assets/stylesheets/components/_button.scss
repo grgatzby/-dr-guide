@@ -12,7 +12,7 @@
 }
 
 .btn-ghost {
-  color: #4A4A4A;
+  color: black;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
@@ -21,6 +21,28 @@
   transition: opacity 0.3s ease;
 }
 
+.btn-success {
+  border-radius: 50px;
+  opacity: 0.8;
+  padding: 8px 24px;
+}
+
 .btn-ghost:hover {
   opacity: 1;
+}
+
+.col-md-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.btn-above-photo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-of-experience {
+  margin-bottom: -10px;
 }
