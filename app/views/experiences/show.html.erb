@@ -55,7 +55,7 @@
 <div class="review">
   <div class="container">
     <div class="cards-review">
-       <% @reviews.each do |review| %>
+       <% @reviews.reverse.each do |review| %>
         <%= render "review", review: review %>
        <% end %>
     </div>
