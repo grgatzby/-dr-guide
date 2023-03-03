@@ -8,7 +8,7 @@
     <%= f.input :description %>
     <%= f.input :category %>
     <%= f.input :location %>
-    <%= f.input :photos, as: :file %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <div class="form-actions">
       <%= f.submit "Create your experience", class: "btn btn-ghost" %>
       <%= link_to "Back", experiences_path, class: "btn btn-ghost"%>
