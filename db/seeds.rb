@@ -13,8 +13,8 @@ puts "------------------------"
 
 20.times do |i|
   User.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+    first_name: i == 1 ? "Ian" : Faker::Name.first_name,
+    last_name: i == 1 ? "Kelly" : Faker::Name.last_name,
     email: "bear#{i}@gmail.com",
     password: "123456"
   )
@@ -26,11 +26,22 @@ experience_acropolis = {
   name: "experience_acropolis",
   title: "Acropolis visit",
   category: "Sight seeing",
-  location: "Athens",
+  location: "Athens, Greece",
   description: "Make the most of your time in Athens with skip-the-ticket-line access to the Acropolis. Upgrade with optional entry to the Acropolis Museum, Ancient Agora, Roman Forum, Kerameikos, Temple of Zeus, or the National Archaeological Museum.",
   photo1: "https://visiterathenes.fr/images/athenes.jpg",
   photo2: "https://visiterathenes.fr/images/parthenon-acropolis.jpg",
   photo3: "https://visiterathenes.fr/images/erechteion.jpg"
+}
+
+experience_santorini = {
+  name: "experience_santorini",
+  title: "Santorini visit",
+  category: "Sight seeing",
+  location: "Greece",
+  description: "There is a wealth of reasons why Santorini is the best Greek island and one of the top travel destinations in the world. If you have a quick dip into the island, it is enough to make you realize its uniqueness and become deeply fond of it. Besides the ideal climate of Greece with hot summers, a bright sun and the temperament of its people that captivates tourists in every part of Greece, Santorini has its distinctive characteristics that make it stand out and deservedly popular all over the world.",
+  photo1: "https://www.greektravel.com/greekislands/santorini/sunset-caldera-view.jpg",
+  photo2: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Oia_sunset_-_panoramio_%282%29.jpg/2560px-Oia_sunset_-_panoramio_%282%29.jpg",
+  photo3: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Thira_%28Santorini%29_-_Ia-01.jpg/2560px-Thira_%28Santorini%29_-_Ia-01.jpg"
 }
 
 experience_spain = {
@@ -69,7 +80,7 @@ experience_brussels = {
 experience_paris = {
   name: "experience_paris",
   title: "From the Louvre and Eiffel Tower to the lesser-known Buttes-Chaumont",
-  category: "Sight seeing",
+  category: "Sight seeing, France",
   location: "Paris",
   description: "We’re sure you’ve got the most famous of Paris sights and attractions right at the top of your holiday hit list. But what else should you try to squeeze into your packed Parisian itinerary? There’s almost too much to see and do in the French capital, let’s be honest, so we’re here to give you some guidance. From a charming mecca for bibliophiles to a stunning off-the-beaten-track park near Belleville, trust us: you’ll never get bored in the City of Light. This is our ultimate guide to sightseeing in Paris. So here we go, strap in, and get ready to say bonjour to these incredible sights.",
   photo1: "https://media.timeout.com/images/100004361/1536/1152/image.jpg",
@@ -121,6 +132,17 @@ experience_amsterdam = {
   photo3: "https://www.voyagetips.com/wp-content/uploads/2020/03/red-light-district-Amsterdam.jpg"
 }
 
+experience_aswan = {
+  name: "experience_aswan",
+  title: "The city also known as the land of gold because it was like a huge necropolis for the pharaohs and their treasures for thousands of years.",
+  category: "Sight seeing",
+  location: "Aswan, Egypt",
+  description: "Aswan is more idyllic than other cities in Egypt—located in southern Egypt, it’s a great place to explore that country’s epic history far away from the chaos of Cairo. Take a traditional wooden felucca around Elephantine Island and explore the ruins of the Temple of Khnum. (Editor's note: Our list was compiled before political unrest prompted many countries to issue travel warnings for Egypt. If you're currently planning a trip to Egypt, please consider the risks and monitor your government's travel alerts.)",
+  photo1: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/46/fe/f2/temple-of-philae.jpg?w=2400&h=-1&s=1",
+  photo2: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/04/ae/bc/photo3jpg.jpg?w=2200&h=-1&s=1",
+  photo3: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/05/b3/61/new-kalabsha.jpg?w=2000&h=-1&s=1"
+}
+
 experience_portugal = {
   name: "experience_portugal",
   title: "10 Wine Tours You Can't Miss in Porto",
@@ -134,6 +156,8 @@ experience_portugal = {
 
 experiences = [
   experience_acropolis,
+  experience_santorini,
+  experience_aswan,
   experience_spain,
   experience_egypt,
   experience_brussels,
@@ -182,10 +206,10 @@ puts "--------------------------"
 
 comments = [
   { comment: "A fantastic visit. I went with a bunch of friends", rating: 5 },
-  { comment: "A fabulous experience", rating: 4 },
-  { comment: "A day to remember", rating: 4 },
+  { comment: "A fabulous experience, will definitely come back", rating: 4 },
+  { comment: "A day to remember, go for it!", rating: 4 },
   { comment: "Too bad the guide would not speek proper english", rating: 3 },
-  { comment: "The place is overrated", rating: 3 },
+  { comment: "The place is overrated, but the guide was really knowledgeable", rating: 3 },
   { comment: "Really worth the long trip", rating: 4 },
   { comment: "I will kick it off my bucket list, so glad I've done it", rating: 4 },
   { comment: "Will come back with the kids next time", rating: 4 },
