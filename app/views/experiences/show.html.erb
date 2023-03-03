@@ -30,21 +30,22 @@
 
         <%# <%= image_tag cl_image_path photo.key %>
 
-    <%= link_to "Go Back", experiences_path, class:"btn btn-light"%>
 
 
 <div class="experience-info">
   <div class="container exp-container">
     <div class="row row-cols-auto">
       <div class="col-md-12">
-        <span>
-          <h2><%= @experience.title %> <%= link_to "Select dates", new_experience_booking_path(@experience), class: 'btn btn-success' %></h2>
-        </span>
         <h5><%= @experience.location %> | <%= @experience.category %> </h5>
         <p><%= @experience.description %></p>
       </div>
       <div class="com-md-0">
-        <%= link_to "Add review", new_experience_review_path(@experience), class: "btn btn-flat"%>
+          <h2><%= @experience.title %></h2>
+          <%= link_to "Edit experience", edit_experience_path(@experience), class: "btn btn-ghost"%>
+          <%= link_to "Remove this experience", experience_path(@experience), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%= link_to "Add a review", new_experience_review_path(@experience), class: "btn btn-ghost"%>
+          <%= link_to "Book your experience", new_experience_booking_path(@experience), class: 'btn btn-ghost' %>
+          <%= link_to "Back to Home page", experiences_path, class:"btn btn-ghost"%>
       </div>
     </div>
   </div>

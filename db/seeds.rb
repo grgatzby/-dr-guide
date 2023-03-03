@@ -2,15 +2,16 @@
 require 'faker'
 require "open-uri"
 
-puts "Destroying databases"
-puts "--------------------"
+puts "--Destroying databases--"
+puts "------------------------"
 Review.destroy_all
 Experience.destroy_all
 User.destroy_all
 
-puts "----Seeding users----"
-puts "---------------------"
-10.times do |i|
+puts "----Seeding 20 users----"
+puts "------------------------"
+
+20.times do |i|
   User.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -20,9 +21,6 @@ puts "---------------------"
 end
 
 users = User.all
-
-puts "-Seeding experiences-"
-puts "----------------------"
 
 experience_acropolis = {
   name: "experience_acropolis",
@@ -39,7 +37,7 @@ experience_spain = {
   name: "experience_spain",
   title: "Breathtaking Sierra Nevada Mountain Ride",
   category: "Horse riding",
-  location: "Sierra Nevada, Spain",
+  location: "Sierra Nevada",
   description: "Make the most of the spectacular surroundings of the Alpujarra hills and Sierra Nevada mountains on this fun horse riding holiday in Spain. You will enjoy two full days of trekking in the area and spend a night in a remote mountain cottage for a horse riding holiday with a difference. Go learn to horse ride beautiful Andalusian horses at this idyllic retreat in the heart of the Sierra Nevada mountains in Spain and immerse yourself in equestrian life on this unique horse riding holiday like no other!",
   photo1: "https://photos.tpn.to/jk/hm/hm/qp/653x490.jpg",
   photo2: "https://photos.tpn.to/qk/em/gh/jr/653x490.jpg",
@@ -61,7 +59,7 @@ experience_brussels = {
   name: "experience_brussels",
   title: "Visit the Marolles in Brussels",
   category: "Sight seeing",
-  location: "brussels",
+  location: "Brussels",
   description: "The Marolles is an old but lively Brussels neighborhood located between the Palace of Justice and the Brussels-South railway station. By exploring its charming streets lined with antique and vintage shops, along with its small galleries and flea market, you’ll undoubtedly be won over by its unique atmosphere.",
   photo1: "https://img.theculturetrip.com/1440x/smart/images/56-3983817-1445372892d1112ab172764bf2a9a2c7ae4780a769.jpg",
   photo2: "https://cdn.theculturetrip.com/images/56-3983819-1445372897181169e55b5646508651f3b46d665cb5.jpg",
@@ -147,47 +145,68 @@ experiences = [
   experience_portugal
 ]
 
+puts "--Seeding 10 experiences--"
+puts "--------------------------"
+
 experiences.each do |experience|
-  experience = Experience.new(
+  puts ">>>>>>> new experience"
+  seeded_experience = Experience.new(
     title: experience[:title],
     category: experience[:category],
     location: experience[:location],
     description: experience[:description]
   )
-  experience.user = users.sample
-  experience.save!
-end
-
-puts "---Seeding reviews---"
-puts "----------------------"
-
-experiences = Experience.all
-experiences.each do |experience|
-  rand(3..10).times do
-    review = Review.new(
-      comment: Faker::Quote.famous_last_words,
-      rating: rand(3..5)
-    )
-    review.user = users.sample
-    review.experience = experience
-    review.save!
-  end
-
-  experience.photos.attach(
+  seeded_experience.user = users.sample
+  # attaching 3 photos
+  puts ">>>>>>> attach 3 photos"
+  seeded_experience.photos.attach(
     io: URI.open(experience[:photo1]),
     filename: "#{experience[:name]}1.jpg",
     content_type: "image/jpg"
   )
-  experience.photos.attach(
+  seeded_experience.photos.attach(
     io: URI.open(experience[:photo2]),
     filename: "#{experience[:name]}2.jpg",
     content_type: "image/jpg"
   )
-  experience.photos.attach(
+  seeded_experience.photos.attach(
     io: URI.open(experience[:photo3]),
     filename: "#{experience[:name]}3.jpg",
     content_type: "image/jpg"
   )
+  seeded_experience.save!
+end
+
+puts "-----Seeding reviews------"
+puts "--------------------------"
+
+comments = [
+  { comment: "A fantastic visit. I went with a bunch of friends", rating: 5 },
+  { comment: "A fabulous experience", rating: 4 },
+  { comment: "A day to remember", rating: 4 },
+  { comment: "Too bad the guide would not speek proper english", rating: 3 },
+  { comment: "The place is overrated", rating: 3 },
+  { comment: "Really worth the long trip", rating: 4 },
+  { comment: "I will kick it off my bucket list, so glad I've done it", rating: 4 },
+  { comment: "Will come back with the kids next time", rating: 4 },
+  { comment: "I recommend it 100%", rating: 5 },
+  { comment: "I found it really expensive", rating: 3 }
+]
+
+Experience.all.each do |experience|
+  # random number of reviews
+  users_cant_review = [experience.user]
+  rand(3..10).times do
+    comment = comments.sample
+    review = Review.new(
+      comment: comment[:comment],
+      rating: comment[:rating]
+    )
+    review.user = (users - users_cant_review).sample
+    users_cant_review << review.user
+    review.experience = experience
+    review.save!
+  end
 end
 
 # 10.times do

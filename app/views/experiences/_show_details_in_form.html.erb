@@ -1,0 +1,4 @@
+  <h2><%= "#{experience.title} (#{experience.location})"%></h2>
+  <% if experience.photos&.attached? %>
+    <div class="form-photo-height" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path experience.photos.first.key, crop: :fill %>')"></div>
+  <% end %>

@@ -1,5 +1,7 @@
 <div class="container-form">
-  <H1>Create an Experience</H1>
+  <h1>Create an experience</h1>
+  <div class="form-photo-height" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path 'motocross.jpg', crop: :fill %>')"></div>
+
   <div class="form">
   <%= simple_form_for @experience do |f| %>
     <%= f.input :title %>
@@ -7,8 +9,8 @@
     <%= f.input :category %>
     <%= f.input :location %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit "Create Experience", class: "btn btn-flat" %>
+    <%= f.submit "Create your experience", class: "btn btn-ghost" %>
+    <%= link_to "Back to Home page", experiences_path, class: "btn btn-ghost"%>
   <% end %>
   </div>
-  <%= link_to "Go back", experiences_path, class: "btn btn-ghost"%>
 </div>
