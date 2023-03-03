@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :experiences do
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :destroy]
   end
+  get "bookings", to: "bookings#index"
 end
