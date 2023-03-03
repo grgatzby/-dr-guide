@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_134352) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_115939) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_134352) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "description"
+    t.text "description"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_134352) do
     t.bigint "experience_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "comment"
+    t.text "comment"
     t.index ["experience_id"], name: "index_reviews_on_experience_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
