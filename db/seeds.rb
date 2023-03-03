@@ -105,9 +105,9 @@ experience_ireland = {
   category: "Landscapes",
   location: "Ireland",
   description: "A copper coast in Ireland? You better believe it. Bookended by the Waterford towns of Tramore in the east and Dungarvan in the west, this awesome seaside stretch derives its name from the flourishing copper industry that built up here in the 19th century. Springtime brings blooming flowers and watercolour sunsets.",
-  photo1: "https://b2670268.smushcdn.com/2670268/wp-content/uploads/triglav-lakes.jpg?lossy=1&strip=1&webp=1",
-  photo2: "https://b2670268.smushcdn.com/2670268/wp-content/uploads/Hospital-Franja.jpg?lossy=1&strip=1&webp=1",
-  photo3: "https://b2670268.smushcdn.com/2670268/wp-content/uploads/Savica-Bohinj-scaled-2.jpg?lossy=1&strip=1&webp=1"
+  photo1: "https://cdn.getyourguide.com/img/tour/2ffa4807c07416b6.jpeg/98.jpg",
+  photo2: "https://cdn.getyourguide.com/img/tour/b0d03bd0b3010a2e.jpeg/145.jpg",
+  photo3: "https://cdn.getyourguide.com/img/tour/721346d654d2c636.jpeg/145.jpg"
 }
 
 experience_amsterdam = {
@@ -195,15 +195,15 @@ comments = [
 
 Experience.all.each do |experience|
   # random number of reviews
-  users_cant_review = [experience.user]
+  users_cannot_review = [experience.user]
   rand(3..10).times do
     comment = comments.sample
     review = Review.new(
       comment: comment[:comment],
       rating: comment[:rating]
     )
-    review.user = (users - users_cant_review).sample
-    users_cant_review << review.user
+    review.user = (users - users_cannot_review).sample
+    users_cannot_review << review.user
     review.experience = experience
     review.save!
   end
