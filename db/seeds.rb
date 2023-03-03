@@ -112,7 +112,7 @@ experience_ireland = {
 
 experience_amsterdam = {
   name: "experience_amsterdam",
-  title: "Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's treasure-packed museums.",
+  title: "Golden Age canals lined by tilting gabled buildings are the backdrop for Amsterdam's museums.",
   category: "Sight seeing",
   location: "Amsterdam, Netherlands",
   description: "Amsterdam's canal-woven core is laced by atmospheric narrow lanes. You never know what you'll find: a tiny hidden garden; a boutique selling witty, stylised Dutch-designed homewares and fashion; a jewel-box-like jenever (Dutch gin) distillery; a flower stall filled with tulips in a rainbow of hues; an old monastery-turned-classical-music-venue; an ultra-niche restaurant such as an all-avocado specialist or one reinventing age-old Dutch classics. Fringing the centre, post-industrial buildings in up-and-coming neighbourhoods now house creative enterprises, from art galleries to craft breweries and cutting-edge tech start-ups, as well as some of Europe's hottest clubs.",
