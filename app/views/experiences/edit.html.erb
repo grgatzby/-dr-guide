@@ -1,12 +1,15 @@
 <div class="container-form">
-  <H1>Edit an Experience</H1>
+  <h1>Edit this experience</h1>
+  <%= render "show_details_in_form", experience: @experience %>
   <div class="form">
   <%= simple_form_for @experience do |f| %>
     <%= f.input :title %>
     <%= f.input :category %>
     <%= f.input :location %>
-    <%= f.submit "Edit Experience", class: "btn btn-flat"%>
+    <div class="form-actions">
+      <%= f.submit "Edit Experience", class: "btn btn-ghost"%>
+      <%= link_to "Back", experience_path(@experience.id), class: "btn btn-ghost"%>
+    </div>
   <% end %>
   </div>
-  <%= link_to "Go back", experiences_path, class: "btn btn-ghost"%>
 </div>

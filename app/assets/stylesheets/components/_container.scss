@@ -5,33 +5,33 @@
 
 .sign-in-container {
   padding: 20px;
-  width: 300px;
-  margin: 10% auto 0;
+  width: 400px;
+  // margin: 10% auto 0;
+  margin: auto;
   border: solid 2px;
-  border-color: blue;
+  border-color: grey;
   border-radius: $card-border-radius;
 }
 
 .sign-in-shared {
   padding: 10px;
-  width: 300px;
-  margin: 10px auto;
+  width: 350px;
+  margin: auto;
   border: solid 2px;
-  border-color: blue;
+  border-color: gray;
   border-radius: $card-border-radius;
 }
 
 .form-actions {
-  width: 100px;
-  margin: 10px auto;
-  border: solid 2px;
-  border-color: blue;
-  color: white;
-  background-color:deepskyblue;
-  border-radius: $card-border-radius;
-
-
+  text-align: center;
+  // width: 100px;
+  // border: solid 2px;
+  // border-color: blue;
+  // color: white;
+  // background-color:deepskyblue;
+  // border-radius: $card-border-radius;
 }
+
 @media(max-width: 992px) {
   .sign-in-container {
     margin: 0 auto 0;

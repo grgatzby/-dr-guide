@@ -1,13 +1,16 @@
 <div class="container-form">
-  <H1>Book an Experience</H1>
+  <h1>Book this experience</h1>
+  <%= render "experiences/show_details_in_form", experience: @experience %>
   <div class="form">
     <%= simple_form_for [@experience, @booking] do |f| %>
       <%= f.input :date_start, as: :string, input_html: {class: 'datepicker'} %>
       <%= f.input :date_end, as: :string, input_html: {class: 'datepicker'} %>
-      <%= f.submit "Add Booking", class: "btn btn-flat"%>
+      <div class="form-actions">
+        <%= f.submit "Book", class: "btn btn-ghost"%>
+        <%= link_to "Back", experience_path(@experience.id), class: "btn btn-ghost"%>
+      </div>
     <% end %>
   </div>
-  <%= link_to "Go back", experiences_path, class: "btn btn-ghost"%>
 </div>
 
 <script>
